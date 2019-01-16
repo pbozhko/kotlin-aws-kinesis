@@ -10,6 +10,9 @@ object PropertiesManager {
         properties.load(javaClass.classLoader.getResourceAsStream("application.properties"))
     }
 
-    fun getString(key: String) =
+    fun getString(key: String): String =
         properties.getValue(key).toString()
+
+    fun getInt(key: String): Int =
+        properties.getValue(key).toString().toInt()
 }
